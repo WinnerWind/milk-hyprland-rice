@@ -10,8 +10,12 @@ A rice for Hyprland, Waybar, Rofi and Wob. Basic, lightweight, and milky.
 1. Install dependencies
 - Arch Linux (And derivatives) - `pacman -S waybar wob rofi hyprland hyprlock hypridle hyprpaper`
 
-3. Move contents of the following folders to the following places
+2. Move contents of the following folders to the following places
 - `Hyprland` to `~/.config/hyprland/`
 - `Waybar` to `~/.config/waybar/`
-- `Wob` to `~/.config/wob`
-- `Rofi` to `~/.config/rofi`
+- `Wob` to `~/.config/wob/`
+- `Rofi` to `~/.config/rofi/`
+
+3. Set wallpaper
+- Go to `~/.config/hyprland/` and edit the `hyprpaper.conf`
+- Change the path in the preload to the photo you want. Generate a photo using [my tool](https://winnerwind.itch.io/mobmwg)
