@@ -1,0 +1,175 @@
+{
+	"layer": "top",
+	// Using margin-bottom with a negative value in order to reduce the space between Hyprland window and waybar
+	"margin-bottom": -2,
+	"margin-top": 0,
+	"modules-left": ["custom/launcher","custom/power","custom/seperator","battery","idle_inhibitor"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["pulseaudio","backlight","custom/seperator","bluetooth","network","clock"],
+	
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 10,
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} MUTE",
+		"on-click":"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click-middle": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"idle_inhibitor": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons":{
+			"activated": "󰅶",
+			"deactivated": "󰾪"
+		}
+	},
+	"network": {
+		// "interface": "wlp2*", // (Optional) To force the use of this interface
+		"format-wifi": " {essid}",
+		"format-ethernet": " ETHERNET",
+		"tooltip-format": "{essid} ({signalStrength}%) | {ifname}: {ipaddr}/{cidr}",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "⚠",
+		"on-click": "$HOME/.config/rofi.soham/rofi/applets/bin/rofi-wifi-menu.sh",
+		"min-length": 20,
+		"max-length": 25
+		},
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
+    "battery": {
+	"interval": 2
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+
+
+     "clock": {
+	"format": "{:%H:%M:%S}  ",
+	"interval":1,
+	"format-alt": "{:%A, %B %d, %Y}",
+	"tooltip-format": "<tt>{calendar}</tt>",
+	"calendar": {
+		"mode"          : "year",
+		"mode-mon-col"  : 3,
+		"weeks-pos"     : "left",
+		"on-scroll"     : 1,
+		"on-click-right": "mode",
+		"format": {
+			"months":     "<span color='#ffead3'><b>{}</b></span>",
+			"days":       "<span color='#ecc6d9'><b>{}</b></span>",
+			"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+			"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+			"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+		}
+	},
+	"actions": {
+		"on-click-right": "mode",
+		"on-click-forward": "tz_up",
+		"on-click-backward": "tz_down",
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down"
+	}
+},
+
+"cpu": {
+	"interval": 1,
+	"format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
+	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+},    
+    "memory": {
+        "interval": 1,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "mpris": {
+	"format": "{status_icon} {title} - {artist} <small>[{position}/{length}]</small>",
+	"on-click-middle": "playerctld shift",
+	"status-icons": {
+		"paused": "⏸",
+		"playing": "⏵"
+		}
+	},
+    "custom/launcher":{
+        "format": "  ",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
+    "custom/power":{
+        "format": "  ",
+        "on-click": "rofi -show powermenu -modi powermenu:/usr/bin/rofi-power-menu",
+    },
+    "custom/notification":{
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+    },
+    // The code following below is given in the great documentation for Waybar status bar under Useful Utilities in Hyprland wiki
+    "hyprland/workspaces": {
+    	"format": "{icon}",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"on-click": "activate",
+	"max-length": 30
+	},
+
+"custom/music":{
+	"format": "{}",
+	"exec": "$HOME/.config/waybar/scripts/music_scroll.sh",
+	"on-click-middle": "playerctld shift",
+	"on-click": "playerctl play-pause"
+},
+"custom/timezones":{
+	"format": "{}",
+	"exec": "$HOME/.config/waybar/scripts/timezones.sh",
+	"on-click": "$HOME/.config/waybar/scripts/timezones.sh click"
+},
+"hyprland/window":{
+	"icon": true
+},
+"bluetooth":{
+	"format": " 󰂯 {status} - {num_connections}",
+	"on-click": "rofi-bluetooth",
+	"tooltip-format-off": "OFF",
+	"tooltip-format-on": "ON",
+	"tooltip-format-connected": "{num_connections}, {device_enumerate}",
+	"min-length": 10
+},
+"custom/seperator":{
+	"format": " | "
+}
+}
