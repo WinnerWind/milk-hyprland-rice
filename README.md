@@ -19,3 +19,7 @@ A rice for Hyprland, Waybar, Rofi and Wob. Basic, lightweight, and milky.
 3. Set wallpaper
 - Go to `~/.config/hyprland/` and edit the `hyprpaper.conf`
 - Change the path in the preload to the photo you want. Generate a photo using [my tool](https://winnerwind.itch.io/mobmwg)
+
+4. Set rofi
+- Add this to the end of your `config.rasi` located in `~/.config/rofi`
+  `@theme "milk2_theme.rasi"`
