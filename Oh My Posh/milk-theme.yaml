@@ -10,6 +10,8 @@ blocks:
       - template: ":"
         type: text
       - type: path
-        template: "{{.Path}}"
+        properties:
+          style: folder
+        template: "{{ .Path}}"
       - type: text
         template: ">"
