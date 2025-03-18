@@ -1,17 +1,26 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 final_space: true
 version: 3
+palette:
+    red: "#ac3232"
 blocks:
   - type: prompt
     alignment: left
     segments:
       - template: "{{ .UserName }}"
         type: text
+        foreground: p:red
+
       - template: ":"
         type: text
+        foreground: p:red
+
       - type: path
+        foreground: p:red
         properties:
           style: folder
         template: "{{ .Path}}"
+      
       - type: text
         template: ">"
+        foreground: p:red
