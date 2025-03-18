@@ -5,6 +5,7 @@
 ![image](https://github.com/user-attachments/assets/a418a941-b6ab-4445-a0c5-dc89fe4ac9f5)
 ![image](https://github.com/user-attachments/assets/b751d296-ca02-4f49-9dc0-1889c3457db6)
 ![image](https://github.com/user-attachments/assets/3e3d178d-c08e-4733-9891-2d20f2d93f54)
+![image](https://github.com/user-attachments/assets/a8ff453e-e46b-4783-b215-5b4f5243cff4)
 
 ### Installation
 - Install required packages `hyprland` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh`
@@ -14,7 +15,8 @@
 - Move `Waybar` to `~/.config/waybar`
 - Move `SwayNC` to `~/.config/swaync`
 - Move `Oh My Posh` to `~/.config/oh-my-posh`
-  
+- Move `Kitty` to `~/.config/kitty`
+
 ### Post Install
 #### Wallpaper
 - Get an image from [This wallpaper generator made by me](https://winnerwind.itch.io/mobmwg)
