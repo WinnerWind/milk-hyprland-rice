@@ -1,0 +1,86 @@
+/************************************************
+ * ROFI Color theme
+ * User: leofa
+ * Copyright: 2017 leofa
+ ***********************************************/
+
+* {
+  text-color: #ac3232;
+  background-color: #0d0d14;
+  milk-red: #ac3232;
+  milk-purple: #52263e;
+  milk-black: #0d0d14;
+  }
+
+window {
+    border-color: @milk-red;
+    border:           5;
+    padding:          5;
+    font: "Courier New 18";
+}
+
+mainbox {
+children: [inputbar,message,listview];
+}
+
+horibox {
+orientation: horizontal;
+children: [powerbox];
+}
+
+powerbox{
+width: 10%;
+placeholder: "Hello World";
+content: "Hello World";
+}
+
+listview {
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element.selected {
+    background-color: @milk-red;
+    text-color:       @milk-black;
+}
+element-icon {
+    background-color: transparent;
+    size: 1em;
+}
+
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: @milk-red;
+    background-color: inherit;
+    handle-width: 8px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       2px 0px 0px ;
+    border-color: @milk-red;
+}
+button {
+    spacing:    0;
+    text-color: @milk-black;
+}
+button.selected {
+    background-color: @milk-purple;
+    text-color:       @milk-black;
+}
+
+inputbar {
+children: [prompt,case-indicator, entry];
+}
+
