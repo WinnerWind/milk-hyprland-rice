@@ -1,0 +1,30 @@
+{
+  "final_space": true,
+  "version": 3,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "{{ .UserName }}",
+          "type": "text"
+        },
+        {
+          "template": ":",
+          "type": "text"
+        },
+        {
+          "type": "path",
+	  "template": "{{.Path}}",
+	  "properties":
+		"style": "folder"
+        },
+        {
+          "type": "text",
+          "template": ">"
+        }
+      ]
+    }
+  ]
+}
