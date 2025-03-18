@@ -12,6 +12,7 @@
 - Move `Hyprland` to `~/.config/hypr`
 - Move `Rofi` to `~/.config/rofi`
 - Move `Waybar` to `~/.config/waybar`
+- Move `SwayNC` to `~/.config/swaync`
 ### Post Install
 - Get an image from [This wallpaper generator made by me](https://winnerwind.itch.io/mobmwg)
 - Change the path in `~/.config/hypr/hyprpaper.conf` to reflect the path of the new wallpaper.
