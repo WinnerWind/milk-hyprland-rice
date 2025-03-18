@@ -7,15 +7,24 @@
 ![image](https://github.com/user-attachments/assets/3e3d178d-c08e-4733-9891-2d20f2d93f54)
 
 ### Installation
-- Install required packages `hyprland` `hyprlock` `swaync` `wob` `rofi` `waybar`
+- Install required packages `hyprland` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh`
 - Move `Wob` to `~/.config/wob`
 - Move `Hyprland` to `~/.config/hypr`
 - Move `Rofi` to `~/.config/rofi`
 - Move `Waybar` to `~/.config/waybar`
 - Move `SwayNC` to `~/.config/swaync`
+- Move `Oh My Posh` to `~/.config/oh-my-posh`
+  
 ### Post Install
+#### Wallpaper
 - Get an image from [This wallpaper generator made by me](https://winnerwind.itch.io/mobmwg)
 - Change the path in `~/.config/hypr/hyprpaper.conf` to reflect the path of the new wallpaper.
+#### Oh My Posh
+- Change your `.bashrc` file and add this to the end
+  ```
+  eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh/milk-theme.yaml')"
+  ```
+  If this line already exists, then simply replace the config path. A `json` variant has been added too.
 
 Problems? Refer to me on my website!
 https://winnerwind.github.io/contact.html
