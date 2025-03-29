@@ -8,7 +8,8 @@
 ![image](https://github.com/user-attachments/assets/a8ff453e-e46b-4783-b215-5b4f5243cff4)
 
 ### Installation
-- Install required packages `hyprland` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh`
+- Install required packages `hyprland` `hyprpaper` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh` `libnotify`
+- You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `rofi-wifi-menu`
 - Move `Wob` to `~/.config/wob`
 - Move `Hyprland` to `~/.config/hypr`
 - Move `Rofi` to `~/.config/rofi`
