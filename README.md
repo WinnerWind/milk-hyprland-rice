@@ -9,7 +9,8 @@
 
 ### Installation
 - Install required packages `hyprland` `hyprpaper` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh` `libnotify`
-- You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `cava` `rofi-wifi-menu`
+    - You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `cava` `rofi-wifi-menu`
+    - You optionally require the following fonts for a good experience [Departure Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DepartureMono.zip)
 - Move `Wob` to `~/.config/wob`
 - Move `Hyprland` to `~/.config/hypr`
 - Move `Rofi` to `~/.config/rofi`
@@ -17,6 +18,7 @@
 - Move `SwayNC` to `~/.config/swaync`
 - Move `Oh My Posh` to `~/.config/oh-my-posh`
 - Move `Kitty` to `~/.config/kitty`
+- Move `QT6CT` to `~/.config/qt6ct`
 
 ### Post Install
 #### Wallpaper
@@ -28,6 +30,8 @@
   eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh/milk-theme.yaml')"
   ```
   If this line already exists, then simply replace the config path. A `json` variant has been added too.
-
+#### QT6CT
+- Open QT6CT and select the Milk theme.
+- Set fonts accordingly.
 Problems? Refer to me on my website!
 https://winnerwind.github.io/contact.html

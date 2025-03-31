@@ -33,7 +33,7 @@
 		"tooltip-format": "{essid} ({signalStrength}%) | {ifname}: {ipaddr}/{cidr}",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "⚠",
-		"on-click": "$HOME/.config/rofi.soham/rofi/applets/bin/rofi-wifi-menu.sh",
+		"on-click": "$HOME/.config/rofi/scripts/rofi-wifi-menu.sh",
 		"min-length": 20,
 		"max-length": 25
 		},
@@ -144,7 +144,7 @@
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"on-click": "activate",
-	"max-length": 30
+	"max-length": 10
 	},
 
 "custom/music":{
@@ -159,7 +159,8 @@
 	"on-click": "$HOME/.config/waybar/scripts/timezones.sh click"
 },
 "hyprland/window":{
-	"icon": true
+	"icon": true,
+	"max-length": 30
 },
 "bluetooth":{
 	"format": " 󰂯 {status} - {num_connections}",

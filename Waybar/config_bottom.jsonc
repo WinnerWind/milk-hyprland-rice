@@ -158,12 +158,12 @@
 },
 "custom/cava" :{
 	"format": "{}",
-	"exec": "$HOME/.config/waybar/scripts/cava.py -f 10 -b 30 -c average"
+	"exec": "$HOME/.config/waybar/scripts/cava.py -f 10 -b 10 -c average"
 },
 "custom/clipboard" :{
 	"tooltip-format": "View the contents of your clipboard",
 	"format": "",
-	"on-click": "rofi -modi clipboard:~/.config/rofi.soham/rofi/applets/bin/cliphist-img.sh -show clipboard -show-icons"
+	"on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 },
 "custom/seperator" :{
 	"format": " | "
