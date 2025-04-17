@@ -9,7 +9,7 @@
 
 ### Installation
 - Install required packages `hyprland` `hyprpaper` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh` `libnotify`
-    - You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `cava` `rofi-wifi-menu` `oh-my-posh` ([Oh My Posh is not a requirement](#oh-my-posh))
+    - You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `cava` `rofi-wifi-menu` `oh-my-posh` ([Oh My Posh is not a requirement](#changing-terminal-greeter))
     - You optionally require the following fonts for a good experience [Departure Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DepartureMono.zip)
 - Move `Wob` to `~/.config/wob`
 - Move `Hyprland` to `~/.config/hypr`
