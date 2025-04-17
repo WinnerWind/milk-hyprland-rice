@@ -9,14 +9,14 @@
 
 ### Installation
 - Install required packages `hyprland` `hyprpaper` `hyprlock` `swaync` `wob` `rofi` `waybar` `oh-my-posh` `libnotify`
-    - You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `cava` `rofi-wifi-menu`
+    - You optionally require the following packages for further functionality: `rofi-calc` `rofi-bluetooth` `rofi-power-menu` `cava` `rofi-wifi-menu` `oh-my-posh` ([Oh My Posh is not a requirement](#oh-my-posh))
     - You optionally require the following fonts for a good experience [Departure Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DepartureMono.zip)
 - Move `Wob` to `~/.config/wob`
 - Move `Hyprland` to `~/.config/hypr`
 - Move `Rofi` to `~/.config/rofi`
 - Move `Waybar` to `~/.config/waybar`
 - Move `SwayNC` to `~/.config/swaync`
-- Move `Oh My Posh` to `~/.config/oh-my-posh`
+- Move `Oh My Posh` to `~/.config/oh-my-posh` (Not required if you do not use Oh My Posh)
 - Move `Kitty` to `~/.config/kitty`
 - Move `QT6CT` to `~/.config/qt6ct`
 
@@ -24,7 +24,12 @@
 #### Wallpaper
 - Get an image from [This wallpaper generator made by me](https://winnerwind.itch.io/mobmwg)
 - Change the path in `~/.config/hypr/hyprpaper.conf` to reflect the path of the new wallpaper.
-#### Oh My Posh
+#### Changing Terminal greeter
+You do not require Oh-My-Posh, simply add/replace this line to your bashrc for the same functionality.
+```
+PS1='\u:\w> '
+```
+However, for those who wish to use Oh My Posh, see this.
 - Change your `.bashrc` file and add this to the end
   ```
   eval "$(oh-my-posh init bash --config '~/.config/oh-my-posh/milk-theme.yaml')"
