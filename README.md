@@ -27,7 +27,7 @@
 #### Changing Terminal greeter
 You do not require Oh-My-Posh, simply add/replace this line to your bashrc for the same functionality.
 ```
-PS1='\u:\w> '
+PS1='\u:\W> '
 ```
 However, for those who wish to use Oh My Posh, see this.
 - Change your `.bashrc` file and add this to the end
